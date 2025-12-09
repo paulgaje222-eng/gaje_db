@@ -1,0 +1,40 @@
+# System files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# VS Code
+.vscode/
+
+# OS specific
+AppData/
+3D Objects/
+Contacts/
+Documents/
+Downloads/
+Favorites/
+Links/
+Music/
+Pictures/
+Saved Games/
+Searches/
+Videos/
+OneDrive/
+.copilot/
+.MUMUVMM/
+.gitconfig
+*.lnk
+*.exe
+*.ini
+*.dat*
+NTUSER.DAT*
+ntuser.dat*
+
+# Unrelated directories
+php-crud-shop/
+../Maano_MyProductInventory/
+../gaje-electric-bill-calculator/
+../bloom-master/
+../bloom-master.zip
+../bill-calculator.html

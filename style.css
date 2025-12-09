@@ -1,0 +1,133 @@
+/* Modern, Cool Design with Clear Typography */
+:root{
+  --primary:#0ea5e9;
+  --secondary:#8b5cf6;
+  --accent:#06b6d4;
+  --success:#10b981;
+  --danger:#ef4444;
+  --text-dark:#0f172a;
+  --text-light:#64748b;
+  --card:#ffffff;
+  --bg-light:#f8fafc;
+}
+
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  background: linear-gradient(180deg, #f0f9ff 0%, #f0fdf4 50%, #f0f9ff 100%);
+  padding:32px 48px;
+  color:var(--text-dark);
+  min-height:100vh;
+}
+
+.container{
+  width:100%;
+  max-width:1200px;
+  background:var(--card);
+  border-radius:16px;
+  box-shadow:0 4px 12px rgba(15,23,42,0.08);
+  padding:36px 40px;
+  margin: 20px 0;
+  text-align: center;
+  border:1px solid rgba(14,165,233,0.1);
+}
+
+h1{
+  margin:0 0 8px 0;
+  font-size:2.2rem;
+  font-weight:800;
+  color:var(--text-dark);
+  letter-spacing:-0.5px;
+}
+p.lead{margin:0 0 20px 0; color:var(--text-light); text-align:center; font-size:1.05rem}
+
+.topbar{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px;justify-content:flex-start}
+.topbar a{background:linear-gradient(135deg, rgba(14,165,233,0.08), rgba(139,92,246,0.08));padding:10px 16px;border-radius:10px;color:var(--primary);text-decoration:none;font-weight:600;border:1px solid rgba(14,165,233,0.2);transition:all .2s ease}
+.topbar a:hover{background:linear-gradient(135deg, rgba(14,165,233,0.15), rgba(139,92,246,0.15));transform:translateY(-1px)}
+
+table{border-collapse:separate;border-spacing:0;width:100%;background:transparent;margin:16px 0}
+thead th{background:linear-gradient(180deg, var(--bg-light), rgba(139,92,246,0.05));font-weight:700;padding:14px 12px;border-bottom:2px solid var(--primary);color:var(--text-dark);font-size:0.95rem}
+th, td{padding:14px 12px;text-align:center;vertical-align:middle;border-bottom:1px solid #e2e8f0;color:var(--text-dark)}
+tbody tr:hover{background:linear-gradient(90deg,rgba(14,165,233,0.03),rgba(139,92,246,0.03));border-radius:8px}
+
+.actions a{margin-right:10px;color:var(--primary);font-weight:600}
+.actions a:hover{color:var(--secondary)}
+
+form{display:block;max-width:900px;margin:18px auto 8px auto}
+label{display:block;margin-bottom:8px;font-weight:600;color:var(--text-dark);font-size:0.95rem}
+input[type="text"], input[type="number"], select, input[type="email"]{
+  width:100%;
+  padding:12px;
+  border-radius:10px;
+  border:1.5px solid #e2e8f0;
+  background:var(--bg-light);
+  box-shadow:inset 0 1px 2px rgba(15,23,42,0.05);
+  font-size:1rem;
+  color:var(--text-dark);
+  transition:border .2s ease, box-shadow .2s ease;
+}
+input[type="text"]:focus, input[type="number"]:focus, select:focus, input[type="email"]:focus{
+  outline:none;
+  border-color:var(--primary);
+  box-shadow:inset 0 1px 2px rgba(15,23,42,0.05), 0 0 0 3px rgba(14,165,233,0.1);
+}
+
+.row{display:flex;gap:12px}
+.col{flex:1}
+
+.button, .btn, button{
+  background:linear-gradient(135deg, var(--primary), var(--secondary));
+  color:white;
+  border:0;
+  padding:12px 20px;
+  border-radius:10px;
+  font-weight:700;
+  font-size:1rem;
+  cursor:pointer;
+  box-shadow:0 6px 20px rgba(14,165,233,0.3);
+  transition:all .2s cubic-bezier(.2,.9,.3,1);
+}
+.button:hover, .btn:hover, button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 28px rgba(14,165,233,0.35);
+}
+.button:active, .btn:active, button:active{
+  transform:translateY(0);
+}
+
+.muted{color:var(--text-light);font-size:.95rem}
+
+a { color: inherit; }
+
+/* Animated letters - highly visible */
+.animate-letters{display:inline-block;font-weight:800;font-size:inherit}
+.animate-letters span{
+  display:inline-block;
+  opacity:0;
+  transform:translateY(16px) rotateZ(2deg);
+  animation:letterUp .7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  color:var(--text-dark);
+  font-weight:inherit;
+}
+.animate-letters span:nth-child(odd){animation-duration:.75s}
+.animate-letters span:nth-child(even){animation-duration:.68s}
+.animate-letters span:nth-child(3n){animation-duration:.72s}
+.animate-letters span{animation-delay:calc(var(--i) * 0.06s)}
+
+@keyframes letterUp{
+  to{
+    opacity:1;
+    transform:translateY(0) rotateZ(0deg);
+  }
+}
+
+@media (max-width:720px){
+  .row{flex-direction:column}
+  .container{padding:24px 20px}
+  thead{display:none}
+  table, tbody, tr, td{display:block;width:100%}
+  td{padding:12px;border-bottom:1px solid rgba(0,0,0,0.06);text-align:left}
+  h1{font-size:1.8rem}
+}
+
